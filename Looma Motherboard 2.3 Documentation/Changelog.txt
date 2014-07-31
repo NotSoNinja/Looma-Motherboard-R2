@@ -1,0 +1,39 @@
+LOOMA Motherboard Changelog
+------------------------------
+Revision 2.3
+------------------------------
+
+Brandon Varner's List of Changes:
+
+Changed: The footprint on the two and three pin molex connectors is incorrect.
+Changed: More space needs to be made for the screw heads. It really needs to be reorganized to have the screw holes be at the four corners.
+Upgraded: The USB hub is a QFN chip for whatever reason my partner thought to use it? There is a QFP version of the chip in the shipment to you. A QFP footprint has legs outside of the body so you can hand solder if needed. I would redesign this section with this version of the chip.
+Changed/Removed: A little more space is needed for the bigger caps and the fuse holder.
+Unaddressed: A screw hole needs to be placed close to the center where the USB vertical port is for structural integrity (if you choose to keep it there).
+Unaddressed: You could add a power switch near the power port fairly easily.
+Changed: The resistors and caps may look small if you are first now working on surface mount components, but they can be many sizes smaller. With the right hot air reflow tool or reflow oven, they are not that hard to work with (and a high powered magnifying lens).
+
+Skip's Additions:
+
+Changed: fan control circuit 
+Unaddressed: 24V Option
+
+Other Changes:
+Added: Ground Plane.
+Added: 3 more USB ports and supporting hardware.
+Added: More silk-screen labels.
+Changed: Fuse is now upright, taking up less board space.
+Changed: Layout (to accommodate other changes and to make more sense when debugging).
+Changed: Screws moved to corners to allow for easier mounting and better isolation.
+
+
+Design Rule Philosophy: Use defaults as much as possible.
+	Reason: defaults usually are made to conform to as many manufacturers' standards as possible
+	Note: Our Trace/Pad spacing is smaller than default to accomodate two fine-pitch IC's
+	Thermal: Provide copper pours where previous design attempted to, considering external heatsinks on the part that caught fire in the last iteration
+
+
+Test Plan: 
+	Labeled Vias at critical points.
+	Can clip Oscilloscope GND to PowerPole GND (labeled).
+	Additional ideas appreciated.
